@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <style>
+    
+        * {
+            /* background: url('firstpage.jpg'); */
+             background-image: url(https://media.istockphoto.com/id/1184816231/photo/reading-room-3d-illustration-bookshelves-reading-place.jpg?s=612x612&w=0&k=20&c=NWBq-CnkBIcnPkM0q1BhyWHOhsBHOzZudURtiVycZis=);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            padding: 100;
+            padding-bottom: 150;
+            padding-top: 150;
+            
+        }
+    
+        </style>
+    </head>
+    <body>
+        <form action="{{url_for('register')}}" method="post">
+            <h1 align="center" style="font-style: italic;"><b>THRIFT MART</b></h1>
+            <table align="center" style="font-style: oblique; font-size:large;" style="padding-right: 50;">
+                <tr>
+                    <td><b>Name</b></td>
+                    <td>:</td>
+                    <td><input type="text" name="sname" required placeholder="Eg:john"><br></td>
+                </tr>
+                <tr>
+                    <td><b>Age</b></td>
+                    <td>:</td>
+                    <td><input type=dept"number" name="age" required placeholder="Eg:18"><br></td>
+                </tr>
+                <tr>
+                    <td><b>DOB</b></td>
+                    <td>:</td>
+                    <td> <input type="date" name="dob" required><br></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td><b>Phone number</b></td>
+                    <td>:</td>
+                    <td><input type="number" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td><b>E-mail id</b></td>
+                    <td>:</td>
+                    <td><input type="email" name="mail" required placeholder="@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td><b>Gender</b></td>
+                    <td>:</td>
+                    <td><input type="radio" name="Gender"><b>Male</b><br>
+                    <input type="radio" name="Gender"><b>Female</b><br>
+                    <input type="radio" name="Gender"><b>Others</b><br></td>
+                </tr>
+                   
+                <tr>
+                    <td><b>Create password</b></td>
+                    <td>:</td>
+                    <td> <input type="password" name="fpass" required placeholder="create password"><br></td>
+                </tr>
+                <tr>
+                    <td><b>Confirm password</b></td>
+                    <td>:</td>
+                    <td> <input type="password" name="lpass" required placeholder="confirm password"><br></td>
+                       
+                </tr>
+                <tr>
+                    <td><b>Address</b></td>
+                    <td>:</td>
+                    <td> <input type="text" name="address" required><br></td>
+                </tr>
+                <tr>
+                    <td><b>City</b></td>
+                    <td>:</td>
+                    <td><input type="text" name="city" id="inputCity" required></td>
+                    
+                </tr>
+                <tr>
+                    <td><b>State</b></td>
+                    <td>:</td>
+                    <td><select id="inputState" name="state" required>
+                    <option selected>Choose...</option>
+                    <option>Tamil Nadu</option>
+                    <option>Kerala</option>
+                    <option>Andhra Pradesh</option>
+                    <option>delhi</option>
+                    </select>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td> <button type="submit" name="btn btn-primary" required >Submit</button></td>
+                </tr>
+                    <tr>
+                    <td><b>Already have an account:</b><a href="{{url_for('login')}}"> <button type="button" name="btn btn-primary" required >Login</button></a></td>
+                </tr>
+                    
+            </table>
+              
+               
+        </form>
+    </body>
+</html>
+    

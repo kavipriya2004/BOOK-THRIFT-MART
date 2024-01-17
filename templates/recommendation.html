@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* styles.css */
+*{
+    background-image: url('https://wallpapercave.com/wp/wp7213365.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding: 100;
+    padding-bottom: 150;
+    padding-top: 150;
+}
+/* Reset default margins and paddings */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a base font size and family */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#recommendations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.recommendation-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.recommendation-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.recommendation-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.recommendation-item p {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #666;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 2px 1px;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 20px solid #4CAF50;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Recommendations</h1>
+    <div id="recommendations">
+            <div class="form-check">
+                
+                <img src="data:image/jpeg;base64,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" width=100px alt="Item 1">
+                <label class="form-check-label" for="flexcheckDefault"><b><a href="{{url_for('horror')}}"><h3>HORROR</a></h3></b></label>
+                <p><b>EX:Dead bell,evil dead,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://free4kwallpapers.com/uploads/originals/2015/10/04/beautifull-dream-fantasy-hd.jpg" width=100px alt="Item 2">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('Fantasy')}}">FANTASY</a></h3></b></label>
+                <p><b>EX:Harry Poter,Six of crows,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/OIP.lSaxstOXe9YlimLhycdGDAHaE8?pid=ImgDet&rs=1"  width=100px alt="Item 3">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('thriller')}}">THRILLER</a></h3></b></label>
+                <p><b>EX:The Guest List,The Silent Patient,etc..</b></p>
+
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/R.ea8077510c33a5a697cf24b9381e3d9a?rik=u7zpRP55p9SJqg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f8%2fd%2fd%2f1326748-free-download-action-wallpaper-hd-1920x1200-for-windows-7.jpg&ehk=olqNdllE10d%2b75cFTHFU5K47riANqsiS9ygdb0P4IKQ%3d&risl=&pid=ImgRaw&r=0"  width=100px alt="Item 4" style="padding-right:10px">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('action')}}">ACTION</a></h3></b></label>
+                <p><b>EX:The Hunger Games,The Road,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/OIP.a80bh2cKNs234QVu3taUsgHaFj?pid=ImgDet&rs=1"  width=100px alt="Item 5"style="padding-left:20px">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('sci_fic')}}">SCI-FIC</a></h3></b></label>
+                <p><b>EX:Eyes Of The Void,Mickey 7,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/OIP.RsMbaODq3xLyV7330W9DVwHaFj?pid=ImgDet&rs=1"  width=100px alt="Item 6">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('children_literature')}}">CHILDREN'S LITERATURE</a></h3></b></label>
+                <p><b>EX:Little Women,The Cinderella,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/OIP.gtnsBwKCXW48xhzuT8jQBwHaFj?pid=ImgDet&rs=1"  width=100px alt="Item 7">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('Poetry')}}">POETRY</a></h3></b></label>
+                <p><b>EX:Leaves Of Grass,Don't Call Us Dead,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://i.pinimg.com/originals/68/ea/a1/68eaa163422f71ee063eca8b4d7a94d3.jpg" width=100px alt="Item 8">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('biography')}}">BIOGRAPHY</a></h3></b></label>
+                <p><b>EX:Abdul Kalam,Long Walk To Freedom,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/OIP.9ks20cjm62C_QslygX4m4QHaGX?pid=ImgDet&rs=1"  width=100px alt="Item 9" style="padding-left:40px">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('Popular')}}">POPULARS</a></h3></b></label>
+                <p><b>EX:Don Quixote,Philosopher's Stone,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/OIP.Iaot-Xkf9NHupWbv94rEdgHaFs?pid=ImgDet&rs=1"  width=100px alt="Item 10" style="padding-left:10px">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('new_arrival')}}">NEW ARRIVAL</a></h3></b></label>
+                <p><b>EX:Fires In The Dark,The Late Americans,etc..</b></p>
+            </div>
+            <div class="form-check">
+               
+                <img src="https://th.bing.com/th/id/R.8730e52faf0ab1269dea9f6ad8fbdf19?rik=fGjuwEnaKjo8eg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-dqVLeE9CvSg%2fUY2myI7uewI%2fAAAAAAAAxBs%2fKs2i4Tqjz3A%2fs1600%2fScience%2bFiction%2bWallpaper%2b(6).jpg&ehk=52p2g6ZuiOh%2b%2fbA0%2b0W95vCzifId7DmxAmysJKzr3Gg%3d&risl=&pid=ImgRaw&r=0"  width=100px alt="Item 11">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('fiction')}}">FICTION</a></h3></b></label>
+                <p><b>EX:Haunted By The Sky,The Kite Runner,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://www.rd.com/wp-content/uploads/2016/11/09-non-fiction-books.jpg"  width=100px alt="Item 12">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('nonfiction')}}">NON FICTION</a></h3></b></label>
+                <p><b>EX:Creative Conference,The Wings Of Fire,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://jamestkelly.com/wp-content/uploads/2020/05/25bestfantasybooks.jpg" width=100px alt="Item 13" style="padding-left:40px">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('novels')}}">NOVELS</a></h3></b></label>
+                <p><b>EX:The Great Gatsby,The Tale of Genji,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/R.c40db7f05325a64a98f5262e665dd6d9?rik=y7QA1REB4oz8nw&riu=http%3a%2f%2fwww.funbuzztime.com%2fwp-content%2fuploads%2f2017%2f03%2from-com-movies.jpg&ehk=BtAZ0nErmkuWLJ5bIzYq%2b4N7pDnsaqPWfwuwxeFBKzQ%3d&risl=&pid=ImgRaw&r=0"  width=100px alt="Item 14" style="padding-left:10px">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('romcom')}}">ROM-COM</a></h3></b></label>
+                <p><b>EX:The Spannish Love Deception,The Love Hypothesis,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/OIP.NDlatzEU61IvC1CMClQgVwHaD4?pid=ImgDet&rs=1"  width=100px alt="Item 15">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('mystery')}}">MYSTERY</a></h3></b></label>
+                <p><b>EX:The Cruel Prince,Hunted By The Sky,etc..</b></p>
+            </div>
+            <div class="form-check">
+                
+                <img src="https://th.bing.com/th/id/OIP.uxJytt3pbtOTPf60w0JO7wHaE7?pid=ImgDet&rs=1"  width=100px alt="Item 15" style="padding-right:40px">
+                <label class="form-check-label" for="flexcheckDefault"><b><h3><a href="{{url_for('moral')}}">MORAL</a></h3></b></label>
+                <p><b>EX:bible,life of christ,etc..</b></p>
+            </div>
+            
+    </div>       
+</body>
+</html>
